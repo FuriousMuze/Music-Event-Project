@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
   end
 
   def create
+    
   end
 
   def destroy
@@ -16,5 +17,10 @@ class SessionsController < ApplicationController
 
   def new
     @user = User.new
+  end
+
+  private
+  def user_params
+    params.require(:user).permit(:email, :user_name, :password, :image_url)
   end
 end
