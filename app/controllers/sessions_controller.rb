@@ -13,4 +13,8 @@ class SessionsController < ApplicationController
 
   def update
   end
+
+  def new
+    @user = User.new
+  end
 end
