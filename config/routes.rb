@@ -21,13 +21,11 @@ Rails.application.routes.draw do
 
   get 'users/new' => 'users#new', as: :new_user
 
-  post '/' => 'users#create'
+  post 'users/' => 'users#create'
 
   get 'users/index'
 
   get 'users/show'
-
-  get 'users/create'
 
   get 'users/destroy'
 
