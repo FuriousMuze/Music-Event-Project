@@ -23,6 +23,9 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    session[:user_id] = nil
+      flash[:error] = 'you have been logged out'
+      redirect_to users_path
   end
 
   def update
