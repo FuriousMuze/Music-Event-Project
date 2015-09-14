@@ -10,6 +10,12 @@ class SessionsController < ApplicationController
     
 =======
 >>>>>>> c28b4ffce7900c0c8a425e0bff7852b4b70cf865
+    #find the user params
+    email = user_params[:email]
+    user name = user_params[:user_name]
+    password = user_params[:password]
+    image = user_params[:image_url]
+    user = User.find_by email: email
   end
 
   def destroy
