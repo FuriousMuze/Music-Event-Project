@@ -33,6 +33,11 @@ Rails.application.routes.draw do
 
   get 'users/update'
 
+  #added into routes after all our other routes
+
+  #destroy the session and log a user out
+  get 'sessions/destroy' => 'sessions#destroy', as: :destroy_session 
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
