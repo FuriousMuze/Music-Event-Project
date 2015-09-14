@@ -13,6 +13,10 @@ Rails.application.routes.draw do
 
   get 'sessions/update'
 
+  get 'users/new' => 'users#new', as: :new_user
+
+  post '/' => 'users#create'
+
   get 'users/index'
 
   get 'users/show'
