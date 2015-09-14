@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'welcome/show'
+
   get 'sessions/index'
 
   get 'sessions/show'
