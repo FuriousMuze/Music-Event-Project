@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'sessions/create'
 
+  post 'sessions/create'
+
   get 'sessions/destroy'
 
   get 'sessions/update'

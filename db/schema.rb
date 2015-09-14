@@ -27,11 +27,7 @@ ActiveRecord::Schema.define(version: 20150913234822) do
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
-<<<<<<< HEAD
-    t.string   "user_name"
-=======
-    t.string   "band_name"
->>>>>>> c28b4ffce7900c0c8a425e0bff7852b4b70cf865
+    t.string   "user_name"    
     t.string   "password_digest"
     t.string   "image_url"
     t.datetime "created_at",      null: false
