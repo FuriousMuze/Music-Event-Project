@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   post 'users/' => 'users#create'
 
-  get 'users/index'
+  get 'users/index' => 'users#index'
 
   get 'users/show'
 
