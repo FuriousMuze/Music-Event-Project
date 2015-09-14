@@ -36,6 +36,10 @@ Rails.application.routes.draw do
   #destroy the session and log a user out
   get 'sessions/destroy' => 'sessions#destroy', as: :destroy_session 
 
+  #added in after all our other routes
+
+  get 'targets/' => 'targets#index', as: :targets
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
