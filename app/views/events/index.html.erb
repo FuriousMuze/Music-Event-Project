@@ -1,3 +1,4 @@
 <% @events.each do |event| %>
-<p><%= event.user.user_name %></p>
+<!-- <p><%= event.user.user_name %></p> -->
+<p><%= User.all.sample.user_name %> at the <%= Venue.all.sample.name %></p>
 <% end %>
