@@ -1,4 +1,10 @@
-<h1>Upcoming Events!</h1>
-<% @events.each do |event| %>
-<p><%= User.all.sample.user_name %> at the <%= Venue.all.sample.name %> <%= Event.all.sample.date_time %></p>
-<% end %>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Upcoming Events!</h3>
+  </div>
+  <div class="panel-body">
+    <% @events.each do |event| %>
+    <p><%= User.all.sample.user_name %> at the <%= Venue.all.sample.name %> <%= Event.all.sample.date_time %></p>
+  	<% end %>
+  </div>
+</div>
