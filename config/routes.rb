@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   delete '/logout', to: 'sessions#destroy'
 
-  get '/login', to: 'sessions#new'
+  get '/login', to: 'sessions#new', as: :login
+
+  post '/login', to: 'sessions#create', as: :create_session
 
     resources :users
     resources :venue

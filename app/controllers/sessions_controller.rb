@@ -1,5 +1,11 @@
 class SessionsController < ApplicationController
+  
   def index
+    @ueser = User.all
+  end
+  
+  def new
+    @user = User.new
   end
 
   def show
@@ -7,9 +13,9 @@ class SessionsController < ApplicationController
 
   def create
     #the following methods can be placed after the 'new' action method
-      user = User.where( email: user_params[:email]).first
+      user = User.find_by(email: params[:email])
 
-      if user && user.authenticate(user_params[:password])
+      if user && user.authenticate(params[:password])
         session[:user_id] = user.id
 
         flash[:success] = 'you are signed in!'
@@ -31,9 +37,6 @@ class SessionsController < ApplicationController
   def update
   end
 
-  def new
-    @user = User.new
-  end
 
   private
   def user_params
