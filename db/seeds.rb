@@ -10,7 +10,7 @@ Event.delete_all
 
 @venues = Venue.create([
 
-	{name: "The pad", location: "Covina", image_url: "http://www.jmu.edu/jmuarts/forbescenter/lightbox/photos/Forbes_Center_ConcertHall_Large_1.jpg"}, {name: "House of Blues", location: "Hollywood", image_url: "http://www.californianightlife.com/administration/GetImage.ashx?images/u/event/houseofblues_002.jpg"}
+	{name: "Pad", location: "Covina", image_url: "http://www.jmu.edu/jmuarts/forbescenter/lightbox/photos/Forbes_Center_ConcertHall_Large_1.jpg"}, {name: "House of Blues", location: "Hollywood", image_url: "http://www.californianightlife.com/administration/GetImage.ashx?images/u/event/houseofblues_002.jpg"}
 
 	])
 
@@ -41,5 +41,5 @@ end
 end
 
 20.times do
-	Event.create({name:Faker::Commerce.product_name,user_id: User.all.sample.id,venue_id: Venue.all.sample.id,body:Faker::Lorem.sentence(15),date_time:Faker::Time.forward(23, :evening)})
+	Event.create({name:Faker::Commerce.product_name,user_id: User.all.sample.id,venue_id: Venue.all.sample.id,body:Faker::Lorem.sentence(15),date_time:Faker::Time.forward(60, :evening)})
 end
