@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'events/index'
+
+  get 'events/new'
+
+  get 'events/show'
+
+  get 'events/update'
+
+  get 'events/destroy'
+
+  get 'events/edit'
+
+  get 'events/create'
+
   root 'welcome#show'
 
   delete '/logout', to: 'sessions#destroy'
