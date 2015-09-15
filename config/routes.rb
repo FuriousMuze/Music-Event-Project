@@ -1,44 +1,14 @@
 Rails.application.routes.draw do
   root 'welcome#show'
 
-  get 'sessions/index'
+  delete '/logout', to: 'sessions#destroy'
 
-  get 'sessions/show'
+  get '/login', to: 'sessions#new'
 
-  #to display the form
-  get 'sessions/new' => 'sessions#new', as: :new_session
-
-  #create a new session (this is the login post)
-  post 'sessions/new' => 'sessions#create', as: :create_session
-  
-  get 'sessions/create'
-
-  post 'sessions/create'
-
-  get 'sessions/destroy'
-
-  get 'sessions/update'
-
-  get 'users/new' => 'users#new', as: :new_user
-
-  post 'users/' => 'users#create'
-
-  get 'users/index' => 'users#index'
-
-  get 'users/show'
-
-  get 'users/destroy'
-
-  get 'users/update'
-
-  #added into routes after all our other routes
-
-  #destroy the session and log a user out
-  get 'sessions/destroy' => 'sessions#destroy', as: :destroy_session 
-
-  #added in after all our other routes
-
-  get 'targets/' => 'targets#index', as: :targets
+    resources :users
+    resources :venue
+    resources :events
+end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -94,4 +64,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+

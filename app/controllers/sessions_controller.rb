@@ -13,12 +13,12 @@ class SessionsController < ApplicationController
         session[:user_id] = user.id
 
         flash[:success] = 'you are signed in!'
-        redirect_to users_path
+        redirect_to user_path(current_user)
       else
         #redirect back to the page
         flash[:error] = 'unable to sign you in'
 
-        redirect_to new_session_path
+        render 'new'
       end
   end
 
