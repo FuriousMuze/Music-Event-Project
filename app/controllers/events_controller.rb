@@ -24,7 +24,7 @@ class EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
 
-    if @event.update_attributes(params.require(event_params)
+    if @event.update_attributes(event_params)
       redirect_to events_index_path
     else
       render :edit
@@ -32,6 +32,9 @@ class EventsController < ApplicationController
   end
 
   def destroy
+    @event = Event.find(params[:id])
+    @event.destroy
+    redirect_to events_index_path
   end
 
   def edit

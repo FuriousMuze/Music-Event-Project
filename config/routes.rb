@@ -19,6 +19,8 @@ Rails.application.routes.draw do
 
   patch "events/:id" => "events#update"
 
+  delete "events/:id" => "events#destroy"
+
   delete '/logout', to: 'sessions#destroy'
 
   get '/login', to: 'sessions#new', as: :login
