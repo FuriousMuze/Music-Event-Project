@@ -1,6 +1,8 @@
 <h1> <%= @event.name %> </h1>
 <h2> <%= @event.date_time %></h2>
-
+<p>Event Description:</p>
 <p> <%= @event.body %></p>
+<p><%= @event.venue.name %></p>
+<img src=<%= @event.venue.image_url %> alt="venue" height="402" width="402">
 
 <%= link_to "Back to the list!", events_index_path %>

@@ -1,13 +1,15 @@
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <p><h3 class="panel-title">Upcoming Events!</h3><div class="create"><%= link_to "Create a new event!", new_event_path %></div></p>
+<div class="overlay">
+	<div class="panel panel-info">
+	  <div class="panel-heading">
+	    <p><h3 class="panel-title">Upcoming Events!</h3><div class="create"><%= link_to "Create a new event!", new_event_path %></div></p>
 
-  </div>
-  <div class="panel-body">
-    <% @events.each do |event| %>
-    <p><%= link_to event.name, event %></p>
-  	<% end %>
-  	
+	  </div>
+	  <div class="panel-body">
+	    <% @events.each do |event| %>
+	    <p><%= link_to event.name, event %></p>
+	  	<% end %>
+	  	
 
-  </div>
+	  </div>
+	</div>
 </div>

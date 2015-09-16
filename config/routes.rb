@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   get 'events/destroy'
 
-  get 'events/edit'
+  get "events/:id/edit" => "events#edit", as: :edit_event
 
   delete '/logout', to: 'sessions#destroy'
 

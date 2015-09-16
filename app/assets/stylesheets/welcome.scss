@@ -1,5 +1,4 @@
 body {
-	background-image: url("https://yovigo.com/news/wp-content/uploads/2014/04/Coachella_Night_Pano_2-FINAL_Flat.jpg");
 	background-color: #cccccc;
 }
 
@@ -16,4 +15,16 @@ body {
 
 h1 {
 	font-size: 65px;
+}
+
+.overlay{
+		background-image: url("https://yovigo.com/news/wp-content/uploads/2014/04/Coachella_Night_Pano_2-FINAL_Flat.jpg");
+    opacity:0.8;
+    background-color:#ccc;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
 }
