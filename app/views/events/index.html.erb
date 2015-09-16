@@ -5,7 +5,7 @@
   </div>
   <div class="panel-body">
     <% @events.each do |event| %>
-    <p><%= event.name %> <%= event.date_time %></p>
+    <p><%= link_to event.name, event %></p>
   	<% end %>
   	
 

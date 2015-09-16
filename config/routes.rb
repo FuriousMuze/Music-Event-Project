@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'events/new' => 'events#new', as: :new_event
 
   post 'events/' => 'events#create'
+
+  get "events/:id" => "events#show", as: :event
   
   get 'events/show'
 
