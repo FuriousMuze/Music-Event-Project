@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
+  root 'welcome#show'
+  
   get 'events/index'
 
   get 'events/new' => 'events#new', as: :new_event
 
+  post 'events/' => 'events#create'
+  
   get 'events/show'
 
   get 'events/update'
@@ -10,10 +14,6 @@ Rails.application.routes.draw do
   get 'events/destroy'
 
   get 'events/edit'
-
-  get 'events/create'
-
-  root 'welcome#show'
 
   delete '/logout', to: 'sessions#destroy'
 
