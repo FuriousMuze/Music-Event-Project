@@ -1,3 +1,19 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	background-image: url("https://yovigo.com/news/wp-content/uploads/2014/04/Coachella_Night_Pano_2-FINAL_Flat.jpg");
+	background-color: #cccccc;
+}
+
+#header {
+	text-align: center;
+	font-family: 'Architects Daughter', cursive;
+	color: #e5e5e5;
+	padding-top: 100px;
+}
+
+.links {
+	float: right;
+}
+
+h1 {
+	font-size: 65px;
+}

@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   post '/login', to: 'sessions#create', as: :create_session
 
+  get 'sessions/destroy' => 'sessions#destroy', as: :destroy_session
+    
     resources :users
     resources :venue
     resources :events

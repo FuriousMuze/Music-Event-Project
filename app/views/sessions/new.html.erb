@@ -1,9 +1,12 @@
 <%= form_for :user, url: create_session_path do |f| %> 
-     <%= label_tag :email %> 
-     <%= text_field_tag :email %>
-
-     <%= label_tag :password %> 
-     <%= password_field_tag :password %> 
-     
-     <%= submit_tag "Log In", class: "button" %>
+<div class="login">
+     <div class="label"><%= label_tag :email %></div>
+     <div class="text"><%= text_field_tag :email %></div>
+<br>
+     <div class="label"><%= label_tag :password %></div>
+     <div class="text"><%= password_field_tag :password %></div>
+</div> 
+<div class="btn-group" role="group" aria-label="...">
+<%= submit_tag "Log In", class: "btn btn-default" %>
+</div>
 <% end %>
