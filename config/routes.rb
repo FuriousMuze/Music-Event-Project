@@ -36,7 +36,7 @@ Rails.application.routes.draw do
 
   get '/login', to: 'sessions#new', as: :login
 
-  delete '/logout', to: 'sessions#destroy'
+  get '/logout', to: 'sessions#destroy', as: :logout
 
   get 'venue' => 'venue#index'
 
