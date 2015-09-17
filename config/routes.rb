@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   delete 'users' => 'users#destroy'
 
-  get 'events/' => 'events#index'
+  get 'events/' => 'events#index', as: :events_index
   
   post 'events/' => 'events#create'
    

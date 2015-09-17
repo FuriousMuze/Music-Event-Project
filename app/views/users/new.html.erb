@@ -1,16 +1,17 @@
-<body>
+<div class="image">
 <%= form_for(@user) do |f| %>
      
-
-      <%= f.label :email %>
+	
+      <div class="entry"><%= f.label :email %>
       <%= f.email_field :email %>
 
-      <%= f.label :password %>
+      <div class="entry"><%= f.label :password %>
       <%= f.password_field :password %>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.label :password_confirmation, "Confirm Password" %>
       <%= f.password_field :password_confirmation %>
 
-      <%= f.submit "Signup" %>
+      <div class="entry"><%= f.submit "Signup" %>
+  </div>
     <% end %>
-</body>
+</div>
