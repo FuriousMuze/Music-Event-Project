@@ -38,9 +38,6 @@ class EventsController < ApplicationController
   end
 
   def edit
-    p "*" * 100
-    p params
-     p "*" * 100
     @event = Event.find(params[:id])
   end
 

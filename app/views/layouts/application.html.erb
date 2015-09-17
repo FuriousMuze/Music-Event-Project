@@ -8,11 +8,11 @@
 </head>
 <body>
 	
-	<div class="button"><button type="button" class="btn btn-default navbar-btn"><%= link_to "Register", new_user_path %></button></div>
+	<button type="button" class="btn btn-default navbar-btn"><%= link_to "Register", new_user_path %></button>
 <% if current_user  %>
-  <div class="button"><button type="button" class="btn btn-default navbar-btn"><%= link_to "Logout", logout_path %></button></div>
+  <button type="button" class="btn btn-default navbar-btn"><%= link_to "Logout", logout_path %></button>
 <% else %>
-	<div class="button"><button type="button" class="btn btn-default navbar-btn"><%= link_to "Login", login_path %></button></div>
+	<button type="button" class="btn btn-default navbar-btn"><%= link_to "Login", login_path %></button>
 <% end %>
 
 <%= yield %>
