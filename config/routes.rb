@@ -1,37 +1,59 @@
 Rails.application.routes.draw do
+  
   root 'welcome#show'
   
-  get 'events/index'
+  get 'users/' => 'users#index'
 
-  get 'events/new' => 'events#new', as: :new_event
+  post 'users/' => 'users#create'
 
+  get 'users/new' => 'users#new', as: :new_user
+
+  get 'users/edit' => 'users#edit'
+
+  patch 'users' => 'users#update'
+
+  put 'users' => 'users/update'
+
+  delete 'users' => 'users#destroy'
+
+  get 'events/' => 'events#index'
+  
   post 'events/' => 'events#create'
+   
+  get 'events/new' => 'events#new', as: :new_event
+  
+  post "events/:id/edit" => "events#edit", as: :edit_event
 
   get "events/:id" => "events#show", as: :event
   
-  get 'events/show'
-
-  get 'events/update'
-
-  get 'events/destroy'
-
-  get "events/:id/edit" => "events#edit", as: :edit_event
-
   patch "events/:id" => "events#update"
 
-  delete "events/:id" => "events#destroy"
+  put 'event/' => 'events#update'
 
-  delete '/logout', to: 'sessions#destroy'
+  delete "events/:id" => "events#destroy"
+  
+  post '/login', to: 'sessions#create', as: :create_session
 
   get '/login', to: 'sessions#new', as: :login
 
-  post '/login', to: 'sessions#create', as: :create_session
+  delete '/logout', to: 'sessions#destroy'
 
-  get 'sessions/destroy' => 'sessions#destroy', as: :destroy_session
-    
-    resources :users
-    resources :venue
-    resources :events
+  get 'venue' => 'venue#index'
+
+  post 'venue' => 'venue#create'
+
+  get 'venue/new' => 'venue#new'
+
+  get 'venue/edit' => 'venue#edit'
+
+  get 'venue' => 'venue#show'
+
+  patch 'venue' => 'venue#update'
+
+  put 'venue' => 'venue#update'
+
+  delete 'venue' => 'venue#destroy'
+
 end
 
   # The priority is based upon order of creation: first created -> highest priority.

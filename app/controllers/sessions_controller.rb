@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   
   def index
-    @ueser = User.all
+    @user = User.all
   end
   
   def new
@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
         session[:user_id] = user.id
 
         flash[:success] = 'you are signed in!'
-        redirect_to events_index_path
+        redirect_to events_path
       else
         #redirect back to the page
         flash[:error] = 'unable to sign you in'

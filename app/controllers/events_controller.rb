@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
-   @events = Event.all
+   @events = Event.all.limit(20)
   end
 
   def new
@@ -25,7 +25,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
 
     if @event.update_attributes(event_params)
-      redirect_to events_index_path
+      redirect_to events_path
     else
       render :edit
     end
@@ -34,10 +34,13 @@ class EventsController < ApplicationController
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
-    redirect_to events_index_path
+    redirect_to events_path
   end
 
   def edit
+    p "*" * 100
+    p params
+     p "*" * 100
     @event = Event.find(params[:id])
   end
 

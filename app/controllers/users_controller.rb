@@ -7,10 +7,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    if User.create(user_params)
-        #redirect to signed in
-        flash[:success] = 'you are registered'
-        redirect_to root_path
+    @user = User.create(user_params)
+      if @user = User.save              
+      session[:user_id] = user.id
+      #redirect to signed in
+      flash[:success] = 'you are registered'
+      redirect_to root_path
       else
 
         flash[:error] = 'registration has failed'
@@ -18,6 +20,7 @@ class UsersController < ApplicationController
         redirect_to new_session_path
 
       end
+
   end
 
   def destroy
