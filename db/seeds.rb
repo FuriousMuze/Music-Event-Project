@@ -4,7 +4,7 @@ Event.delete_all
 
 @users = User.create([
 
-	{user_name: "Sonic Animals", email: "sonic@yahoo.com", password: "password"}, {user_name: "Technicolor Formula", email: "techni@gmail.com", password: "password"}
+	{email: "sonic@yahoo.com", password: "password"}, {"Technicolor Formula", email: "techni@gmail.com", password: "password"}
 
 	])
 
@@ -16,19 +16,8 @@ Event.delete_all
 
 
 30.times do 
-	User.create({user_name:Faker::Team.name,email:Faker::Internet.free_email,password:"password"})
+	User.create({email:Faker::Internet.free_email,password:"password"})
 end
-
-users = User.all
-
-users.each do |user|
-	name = user.user_name.split.last
-	name = name[0].upcase + name[1...name.length]
-	user.user_name = user.user_name.split.first + " " + name
-	user.save
-end
-
-
 
 20.times do
 	Event.create({name:Faker::Commerce.product_name,user_id: User.all.sample.id,venue_id: Venue.all.sample.id,body:Faker::Lorem.sentence(15),date_time:Faker::Time.forward(60, :evening)})
