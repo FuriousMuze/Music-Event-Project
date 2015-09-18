@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
-   @events = Event.all.limit(20)
+   @events = Event.all
   end
 
   def new
@@ -22,12 +22,17 @@ class EventsController < ApplicationController
   end
 
   def update
-    @event = Event.find(params[:id])
-    
+    @event = Event.find(params[:id]) 
+    #@venue = Event.venue
     if @event.update_attributes(event_params)
-      redirect_to events_path
+      redirect_to event_path
     else
       render :edit
+    # end
+    # if @venue.update_attributes()
+    #   redirect_to event_path
+    # else
+    #   render :edit
     end
   end
 
