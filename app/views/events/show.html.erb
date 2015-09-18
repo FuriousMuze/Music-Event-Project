@@ -3,7 +3,7 @@
 <p>Event Description:</p>
 <p> <%= @event.body %></p>
 <p><%= @event.venue.name %></p>
-<img src=<%= @event.venue_id.image_url %> alt="venue" height="402" width="402">
+<img src=<%= @event.venue.image_url %> alt="venue" height="402" width="402">
 
 <%= link_to "Back to the list!", events_path %>
 <%= link_to "Edit this event!", edit_event_path, method: :update %>
