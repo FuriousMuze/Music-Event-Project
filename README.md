@@ -1,6 +1,6 @@
 # Music-Event-Project
 
-gitHub: https://github.com/FuriousMuze/Music-Event-Project
+heroku: https://cachella-events.herokuapp.com/
 
 trello: https://trello.com/b/ZFzOEsaR/music-event-project
 
