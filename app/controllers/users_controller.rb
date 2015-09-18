@@ -8,11 +8,11 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-      if @user = User.save              
-      session[:user_id] = user.id
+      if @user               
+      session[:user_id] = @user.id
       #redirect to signed in
       flash[:success] = 'you are registered'
-      redirect_to root_path
+      redirect_to events_index_path
       else
 
         flash[:error] = 'registration has failed'
