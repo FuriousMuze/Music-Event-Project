@@ -4,7 +4,7 @@ Event.delete_all
 
 @users = User.create([
 
-	{email: "sonic@yahoo.com", password: "password"}, {"Technicolor Formula", email: "techni@gmail.com", password: "password"}
+	{email: "sonic@yahoo.com", password: "password"}, {email: "techni@gmail.com", password: "password"}
 
 	])
 
